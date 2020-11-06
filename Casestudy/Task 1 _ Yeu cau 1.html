@@ -15,33 +15,29 @@
 </head>
 <body>
 
-<form>
+<form id="form">
     <fieldset style=" background-color: cornflowerblue; margin-right: 70%">
         <div class="a">
             <h2 style="color: blue">ĐĂNG KÝ</h2>
         </div>
-        <label>Name:</label>
-        <input type="text">
+        <label>Họ và tên:</label><input type="text" name="name">
         <br>
         <br>
-        <label>Identity card number:</label>
-        <input type="text">
+        <label>CMND:</label><input type="number" name="cmnd">
         <br>
         <br>
-        <label>Date of birth:</label>
-        <input type="date">
+        <label>Ngày tháng năm sinh:</label><input type="date" name="date">
         <br>
         <br>
-        <label>Email:</label>
-        <input type="text">
+        <label>Email:</label><input type="text" name="email">
         <br>
         <br>
-        <label>Address:</label>
-        <textarea></textarea>
+        <label>Địa chỉ:</label>
+        <textarea name="address"></textarea>
         <br>
         <br>
-        <label>Customer Type:</label>
-        <select>
+        <label>Loại Customer:</label>
+        <select name="type">
             <option>---Loại Customer---</option>
             <option>Diamond</option>
             <option>Platinum</option>
@@ -51,26 +47,26 @@
         </select>
         <br>
         <br>
-        <label>Sales: </label><input type="number">
+        <label>Giảm giá: </label><input type="number" name="sales">
         <br>
         <br>
-        <label>Amount: </label><input type="number">
+        <label>Số lượng đi kèm: </label><input type="number" name="amount">
         <br>
         <br>
-        <label>Rent days:</label><input type="number">
+        <label>Số ngày thuê:</label><input type="number" name="rent">
         <br>
         <br>
-        <label>Type of service:</label>
-        <select>
+        <label>Loại dịch vụ:</label>
+        <select name="service">
             <option>---Loại dịch vụ---</option>
-            <option>Villa 500$/1 ngày</option>
-            <option>House 300$/1 ngày</option>
-            <option>Room 100$/1 ngày</option>
+            <option value="500">Villa 500$/1 ngày</option>
+            <option value="300">House 300$/1 ngày</option>
+            <option value="100">Room 100$/1 ngày</option>
         </select>
         <br>
         <br>
-        <label>Type Room:</label>
-        <select>
+        <label>Loại phòng thuê:</label>
+        <select name="room">
             <option>---Loại phòng thuê---</option>
             <option>Vip</option>
             <option>Business</option>
@@ -84,5 +80,30 @@
         </div>
     </fieldset>
 </form>
+
+<script>
+    let form = document.getElementById('form');
+    function Đăngký() {
+        document.write("Họ và tên :" + form.name.value + '<br>');
+        document.write("CMND :" + form.cmnd.value + '<br>');
+        document.write("Ngày tháng năm sinh :" + form.date.value + '<br>');
+        document.write("Email:" + form.email.value + '<br>');
+        document.write("Địa chỉ :" + form.address.value + '<br>');
+        document.write("Loại Customer :" + form.type.value + '<br>');
+        document.write("Giảm giá :" + form.sales.value + '<br>');
+        document.write("Số lượng đi kèm :" + form.amount.value + '<br>');
+        document.write("Số ngày thuê :" + form.rent.value + '<br>');
+        document.write("Loại dịch vụ :" + form.service.value + '<br>');
+        document.write("Loại phòng :" + form.room.value + '<br>');
+
+        let service = parseInt(form.service.value);
+        let rent = parseInt(form.rent.value);
+        let sale = parseInt(form.sale.value);
+        let result = service * rent *(1 - sales/100);
+        document.write("Giá tiền:"+ result+ $);
+    }
+
+
+</script>
 </body>
 </html>
