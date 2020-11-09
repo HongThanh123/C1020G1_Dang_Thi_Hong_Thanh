@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt('Nhập thu nhập tính thuế'));
+    let result = 0;
+    if (a>80){
+        result = 35 * a/100 - 9.85;
+    }else if (a>52){
+        result = 30 * a/100 - 5.85;
+    }else if (a>32){
+        result = 25 * a/100 - 3.25;
+    }else if (a>18){
+        result = 20*a/100 - 1.65;
+    }else if (a>10){
+        result = 15*a/100 - 0.75;
+    }else if (a>5){
+        result = 10*a/100 - 0.25;
+    }else {
+        result = 5*a/100
+    }
+    alert('Thu nhập cá nhân là:' + result);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt('Nhập số a'));
+    let b = parseInt(prompt('Nhập số b'));
+    let c = parseInt(prompt('Nhập số c'));
+    num = b*b - 4*a*c;
+    if (num < 0){
+        document.write('PT vô nghiệm');
+    } else if (num==0){
+        let x = -b/2*a;
+        document.write('PT có 1 nghiệm x =' + x );
+    }else {
+        let x1 = -(b + Math.sqrt(num))/(2*a);
+        let x2 = -(b - Math.sqrt(num))/(2*a);
+        document.write('PT có 2 nghiệm: ' + x1 + '\n' +x2 );
+    }
+</script>
+
+</body>
+</html>

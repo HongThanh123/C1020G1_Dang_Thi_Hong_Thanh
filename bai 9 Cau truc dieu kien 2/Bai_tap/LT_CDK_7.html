@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ĐIỆN THOAI</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt('nhập số phút gọi nội mạng'));
+    let b = parseInt(prompt('nhập số phút gọi ngoại mạng'));
+    let result=0;
+    if (a>10){
+        result1 = 1000*a;
+    } else {
+        result1 = 1200*a;
+    }
+    alert('số tiền cước nội mạng là :' + result1);
+    if (b>10){
+        result2 = 1200*b;
+    }else {
+        result2 = 1500*b;
+    }
+    alert('số tiền cước ngoại mạng là :'+ result2);
+    alert('số tiền cước tổng là:' + (result1+result2));
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt('Nhập số điện'));
+    let num = 0;
+    if (a>100){
+        num = 3000;
+    }else if (a>80){
+        num = 2500;
+    }else if (a>50){
+        num = 2000;
+    }else {
+        num = 1500;
+    }
+  alert('Giá tiền điện là:' + a*num);
+</script>
+</body>
+</html>
