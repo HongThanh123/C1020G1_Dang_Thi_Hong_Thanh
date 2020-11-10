@@ -3,122 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Task 1</title>
-    <style>
-        div.a{
-            text-align: center;
-        }
-        label{
-            display: inline-block;
-            width: 150px;
-        }
-    </style>
+
 </head>
 <body>
+<form>
 
-<form id="form">
-    <fieldset style=" background-color: cornflowerblue; margin-right: 70%">
-        <div class="a">
-            <h2 style="color: blue">ĐĂNG KÝ</h2>
-        </div>
-        <label>Họ và tên:</label><input type="text" name="name">
-        <br>
-        <br>
-        <label>CMND:</label><input type="number" name="cmnd">
-        <br>
-        <br>
-        <label>Ngày tháng năm sinh:</label><input type="date" name="date">
-        <br>
-        <br>
-        <label>Email:</label><input type="text" name="email">
-        <br>
-        <br>
-        <label>Tỉnh:</label>
-        <select name="city">
-            <option>Đà Nẵng</option>
-            <option>Huế</option>
-            <option>Quảng Nam</option>
-        </select>
-        <br>
-        <br>
-        <label>Địa chỉ:</label>
-        <textarea name="address"></textarea>
-        <br>
-        <br>
-        <label>Loại Customer:</label>
-        <select name="type">
-            <option>---Loại Customer---</option>
-            <option>Diamond</option>
-            <option>Platinum</option>
-            <option>Gold</option>
-            <option>Silver</option>
-            <option>Member</option>
-        </select>
-        <br>
-        <br>
-        <label>Giảm giá: </label><input type="number" name="sales">
-        <br>
-        <br>
-        <label>Số lượng đi kèm: </label><input type="number" name="amount">
-        <br>
-        <br>
-        <label>Số ngày thuê:</label><input type="number" name="rent">
-        <br>
-        <br>
-        <label>Loại dịch vụ:</label>
-        <select name="service">
-            <option>---Loại dịch vụ---</option>
-            <option value="500">Villa 500$/1 ngày</option>
-            <option value="300">House 300$/1 ngày</option>
-            <option value="100">Room 100$/1 ngày</option>
-        </select>
-        <br>
-        <br>
-        <label>Loại phòng thuê:</label>
-        <select name="room">
-            <option>---Loại phòng thuê---</option>
-            <option>Vip</option>
-            <option>Business</option>
-            <option>Normal</option>
-        </select>
-        <br>
-        <br>
-        <div class="a">
-            <input type="submit"; value="Sign up" style="background-color: burlywood; color: white" onclick="Đăngký()">
-            <input type="submit"; value="Reset" style="background-color: burlywood; color: white" onclick="Đăngký()">
-        </div>
-    </fieldset>
 </form>
 
-<script>
-    let form = document.getElementById('form');
-    function Đăngký() {
-        document.write("Họ và tên :" + form.name.value + '<br>');
-        document.write("CMND :" + form.cmnd.value + '<br>');
-        document.write("Ngày tháng năm sinh :" + form.date.value + '<br>');
-        document.write("Email:" + form.email.value + '<br>');
-        document.write("Tỉnh:" + form.city.value + '<br>');
-        document.write("Địa chỉ :" + form.address.value + '<br>');
-        document.write("Loại Customer :" + form.type.value + '<br>');
-        document.write("Giảm giá :" + form.sales.value + '<br>');
-        document.write("Số lượng đi kèm :" + form.amount.value + '<br>');
-        document.write("Số ngày thuê :" + form.rent.value + '<br>');
-        document.write("Loại dịch vụ :" + form.service.value + '<br>');
-        document.write("Loại phòng :" + form.room.value + '<br>');
-
-        let service = parseInt(form.service.value);
-        let type = parseInt(form.type.value);
-        let rent = parseInt(form.rent.value);
-        let sale = parseInt(form.sales.value);
-        let result = service * rent *(1 - sale/100);
-        document.write("Giá tiền:"+ result+ "$");
-    }
-    let a = parseInt('Diamond');
-    let a = parseInt('Diamond');
-    let a = parseInt('Diamond');
-
-
-
-
-</script>
 </body>
 </html>
