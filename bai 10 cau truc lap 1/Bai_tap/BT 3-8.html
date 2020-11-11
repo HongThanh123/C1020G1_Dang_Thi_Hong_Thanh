@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="playGame()">Chơi</button>
+<script>
+    function playGame() {
+        let StartNumber = parseInt(prompt('Nhập số bắt đầu'));
+        let EndNumber = parseInt(prompt('Nhập số kết thúc'));
+        let random = parseInt((Math.random() * (EndNumber - StartNumber)) + StartNumber);
+        let Guess;
+        let count = 0;
+        do {
+            Guess = parseInt(prompt('Nhập sô đoán'));
+            if (Guess>random){
+                alert('Số bạn nhập lớn hơn.Nhập lại')
+            }else if (Guess<random){
+                alert('Số bạn nhập nhỏ hơn.Nhập lại')
+            }else {
+                alert('Chúc mừng');
+                break;
+            }
+            count++;
+        }while (count<3);
+
+
+
+    }
+</script>
+</body>
+</html>

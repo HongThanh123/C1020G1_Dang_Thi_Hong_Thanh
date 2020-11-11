@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let temp1 = 0;
+    let temp2 = 1;
+    let result;
+    let i;
+    let total = 1;
+    for (i =2; i<20 ; i++){
+        result = temp1 + temp2;
+        temp1 = temp2;
+        temp2 = result;
+        total += result;
+    }document.write(total);
+</script>
+
+</body>
+</html>

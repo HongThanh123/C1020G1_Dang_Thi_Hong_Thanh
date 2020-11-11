@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let temp1 = 0;
+    let temp2 = 1;
+    let result;
+    let i;
+    document.write(temp1 + '<br>');
+    document.write(temp2 + '<br>');
+    for (i =0; i<18 ; i++){
+        result = temp1 + temp2;
+        document.write(result +'<br>');
+        temp1 = temp2;
+        temp2 = result;
+    }
+
+
+</script>
+</body>
+</html>
