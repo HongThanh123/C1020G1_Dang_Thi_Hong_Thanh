@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+feet : <input onchange="footToMeter()" type="number" name="" id="feet" >
+meters : <input onchange=" meterToFoot()"  type="number" name="" id="meter">
+<script type="text/javascript">
+    function footToMeter() {
+        let feet = document.getElementById('feet').value;
+        document.getElementById("meter").value= 3.275 * feet;
+
+    }
+    function meterToFoot() {
+        let meter = document.getElementById('meter').value;
+        document.getElementById("feet").value = 0.305 * meter;
+
+
+    }
+
+</script>
+
+
+</body>
+</html>
