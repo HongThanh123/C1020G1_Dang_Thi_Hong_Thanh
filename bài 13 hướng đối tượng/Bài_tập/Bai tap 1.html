@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;"></canvas>
+<script>
+    class Rectangle {
+        constructor(D,R,S,P) {
+            this.D = D;
+            this.R = R;
+            this.S = S;
+            this.P = P;
+        }
+        getD (){
+            return this.D
+        }
+        getR (){
+            return this.R
+        }
+        getS (){
+            return this.S = this.D * this.R
+        }
+        getP (){
+            return this.P = 2*(this.D + this.R)
+        }
+        setD (){
+            return this.D
+        }
+        setR (){
+            return this.R
+        }
+        setS (){
+            return this.S = this.D * this.R
+        }
+        setP (){
+            return this.P = 2*(this.D + this.R)
+        }
+    }
+    let rec = new Rectangle(3,4);
+    let S = rec.getS();
+    let P = rec.getP();
+    document.write('Diện tích là :' + S + '<br>' + 'Chu vi là :' + P + '<br>');
+
+
+    // rec.setD(5);
+    // rec.setR(10);
+    // rec.setS();
+    // rec.setP();
+    // document.write('Diện tích là :' + rec.S + '<br>' + 'Chu vi là :' + rec.P );
+
+    let canvas = document.getElementById("myCanvas");
+    let Ctx = canvas.getContext("2d");
+    Ctx.fillStyle = "Green";
+    Ctx.fillRect(17,13,150,75);
+
+
+
+
+
+</script>
+</body>
+</html>

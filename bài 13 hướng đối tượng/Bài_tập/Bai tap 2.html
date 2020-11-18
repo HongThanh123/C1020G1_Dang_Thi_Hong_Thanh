@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(C) {
+            this.C = C;
+        }
+
+        change() {
+            return 1.8*this.C + 32
+        }
+        action(){
+            return this.C + 273.15
+        }
+    }
+    let tem = new Temperature(25);
+    let doF = tem.change();
+    let doK = tem.action();
+    document.write('Đây là độ F :' + doF +'<br>' + 'Đây là độ K :' + doK);
+
+
+
+
+</script>
+
+</body>
+</html>

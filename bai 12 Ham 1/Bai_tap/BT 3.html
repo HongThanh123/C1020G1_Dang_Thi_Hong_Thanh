@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<input type="button" value="Bài 1" onclick="check1()">
+<input type="button" value="Bài 2" onclick="check2()">
+<input type="button" value="Bài 3" onclick="check3()">
+<input type="button" value="Bài 4" onclick="check4()">
+<input type="button" value="Bài 5" onclick="check5()">
+<body>
+<script>
+    function  check1() {
+        function alertMessage() {
+           let  Mess ='Xin chao';
+           return Mess;
+    }
+    alert(alertMessage());
+    }
+    
+    function check2() {
+        function number(a) {
+            let result=  a +1;
+            return result;
+
+        }
+        let b = parseInt(prompt('Nhập sô'))
+        alert(number(b));
+
+    }
+
+    function check3() {
+        function total(a,b) {
+            if(a>b){
+                alert(a + " lớn hơn " + b);
+            } else if(a<=b){
+                let result = a+b;
+                return result;
+            }
+        }
+        let a = parseInt(prompt("Nhập số a :"));
+        let b = parseInt(prompt("Nhập số b :"));
+        alert(total(a,b));
+    }
+
+    function check4() {
+        function addNumbers() {
+            let firstNum = 4;
+            let secondNum = 8;
+            let result = firstNum + secondNum;
+            return result;
+
+        }
+        alert(addNumbers());
+        result = 0;
+        result = addNumbers();
+        alert(result);
+
+    }
+
+    function check5() {
+        let arr = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let arr1 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        let a = prompt("Tên Ngôi Sao: ");
+        function search() {
+            let i;
+            for (i=0; i<arr.length; i++) {
+                if (arr.indexOf(a) !== -1) {
+                    arr[i] = arr1[i];
+                    return arr1[i];
+
+                } else {
+                    alert("Không tìm thấy ngôi sao")
+                    break;
+                }
+            }
+        }
+        alert(search(a));
+    }
+</script>
+
+</body>
+</html>
