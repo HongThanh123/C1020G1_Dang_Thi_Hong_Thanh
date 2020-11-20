@@ -20,16 +20,30 @@
 </head>
 <body>
 <h2>Từ Điển Anh - Việt</h2>
-<form>
-    <input type="text" name="search" placeholder="Nhập từ cần tìm"/>
-    <input type = "submit" id = "submit" value = "Tìm"/>
-</form>
-<script>
-let array = ["Hello" , "Name"];
-let array1 = ["Xin chào", "Tên"];
 
+EN:    <input type="text" id="en" name="search" placeholder="Nhập từ cần tìm"/>
+VN:    <input type="text" id="result" name="search" placeholder="Kết quả"/>
+    <input type = "submit" onclick="english()" id = "submit" value = "Tìm"/>
 
+<script type="text/javascript">
+    let result = document.getElementById("result");
+
+    function english() {
+        let temp;
+        let en = document.getElementById("en").value;
+        let EN = ["dog", "cat", "mouse"];
+        let VN = ["chó", "mèo", "chuột"];
+        for (let i = 0; i < EN.length; i++) {
+            if (en === EN[i]) {
+                temp = VN[i];
+                break;
+            } else {
+            temp = "no data";
+        }
+        }
+        result.value = temp;
+
+    }
 </script>
-
 </body>
 </html>

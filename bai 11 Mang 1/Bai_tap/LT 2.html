@@ -4,7 +4,34 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<h4 onclick="check1()">Bài 1</h4>
+<h4 onclick="check2()">Bài 2</h4>
 <body>
+<script>
+    function check1() {
+        let a = [
+            [1, 2, 1, 24],
+            [8, 11, 9, 4],
+            [7, 0, 7, 27],
+            [7, 4, 28, 14],
+            [3, 10, 26, 7]
+        ];
+        for(let i in a){
+            document.writeln("row" + i);
+            for(let j in a[i]){
+                document.writeln(" " + a[i][j]);
+            }
+        }
+    }
 
+    function check2() {
+        let arr = [];
+        for(let i=0; i<5; i++){
+            arr.push(prompt(""))
+        }
+        arr.reverse().join();
+        alert(arr);
+    }
+</script>
 </body>
 </html>

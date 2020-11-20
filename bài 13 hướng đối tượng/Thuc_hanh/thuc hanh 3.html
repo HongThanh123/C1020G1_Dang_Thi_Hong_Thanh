@@ -13,7 +13,66 @@
 <body>
 <canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;">
     <script>
+        function check1() {
 
+        class Circle {
+            constructor(x,y,radius) {
+                this.x = x;
+                this.y = y;
+                this.radius = radius;
+            }
+        }
+        let canvas = document.getElementById('myCanvas');
+        let ctx = canvas.getContext ('2d');
+        ctx.beginPath();
+        ctx.arc(100,100,100,0,2*Math.PI);
+        ctx.stroke();
+        }
+        function check2() {
+            class Circle {
+                constructor(x,y,radius) {
+                    this.x = x;
+                    this.y = y;
+                    this.radius = radius;
+                }
+            }
+            let ctx = document.getElementById('myCanvas').getContext('2d');
+            let radius = Math.floor(Math.random()*80);
+            let circle = new  Circle(500,500,80);
+            ctx.beginPath();
+            ctx.arc(circle.x,circle.y,circle.radius,0,2*Math.PI);
+            ctx.stroke();
+        }
+        // function check3() {
+        //     class Circle {
+        //         constructor(x,y,radius) {
+        //             this.x = x;
+        //             this.y = y;
+        //             this.radius = radius;
+        //         }
+        //         getRandomHex (){
+        //             return Math.floor(Math.random() * 255);
+        //         }
+        //         getRandomColor(){
+        //             let red = getRandomHex();
+        //             let green = getRandomHex();
+        //             let blue = getRandomHex();
+        //             return "rgb(" + red + "," + blue + "," + green +")";
+        //         }
+        //         createCircle(){
+        //             let ctx = document.getElementById("myCanvas").getContext("2d");
+        //             let radius = Math.floor(Math.random() * 80);
+        //             let color = getRandomColor();
+        //             let circle= new Circle(500, 500, radius);
+        //             ctx.beginPath();
+        //             ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+        //             ctx.fillStyle = color;
+        //             ctx.fill();
+        //         }
+        //     }
+
+
+        }
     </script>
 </body>
 </html>
