@@ -5,73 +5,115 @@
     <title>Câu chuyện Adam và Eva</title>
 </head>
 <body>
+<!--<script>-->
+<!--    class Apple{-->
+<!--        constructor(weight) {-->
+<!--            this.weight = weight;-->
+<!--        }-->
+<!--        decrease () {-->
+<!--            return this.weight;-->
+<!--        }-->
+<!--        isEmpty () {-->
+<!--            if (this.weight === 0) {-->
+<!--                return true-->
+<!--            } else {-->
+<!--                return false-->
+<!--            }-->
+<!--        }-->
+<!--        getWeight = function () {-->
+<!--            return this.weight;-->
+<!--        }-->
+<!--    }-->
+<!--    class Human{-->
+<!--        constructor(name, weight,gender) {-->
+<!--            this.name = name;-->
+<!--            this.gender = gender;-->
+<!--            this.weight = weight;-->
+<!--        }-->
+<!--        isMale () {-->
+<!--            if (this.gender == "male") {-->
+<!--                return true-->
+<!--            } else {-->
+<!--                return false-->
+<!--            }-->
+<!--        }-->
+<!--        setGender (sex) {-->
+<!--            return this.gender = sex;-->
+<!--        }-->
+<!--        eatApple  (apple) {-->
+<!--            if (!apple.isEmpty()) {-->
+<!--                this.weight += 1;-->
+<!--                apple.decrease();-->
+<!--                console.log('${this.name} eat apple....')-->
+
+<!--            }-->
+<!--        }-->
+<!--    }-->
+<!--    function theStory (){-->
+<!--        let adam = new Human('adam', 60);-->
+<!--        let eva = new Human('eva', 45);-->
+<!--        let apple = new Apple()-->
+<!--        adam.setGender('male');-->
+<!--        eva.setGender('female');-->
+<!--        while (apple.weight > 0) {-->
+<!--        adam.eatApple(apple);-->
+<!--        eva.eatApple(apple);-->
+<!--    }-->
+<!--    document.write('Apple are already eaten');-->
+<!--    }-->
+<!--    theStory();-->
+<!--</script>-->
+
 <script>
-    class Apple{
+    class Apple {
         constructor(weight) {
             this.weight = weight;
         }
-        decrease () {
-            return this.weight;
-        }
-        isEmpty () {
-            if (this.weight === 0) {
-                return true
-            } else {
-                return false
+        checkApple() {
+            if (this.weight > 0) {
+                return true;
             }
+            return false;
         }
-        getWeight = function () {
+        decrease() {
+            this.weight--;
+        }
+        getWeight() {
             return this.weight;
         }
     }
-    class Human{
-        constructor(name, weight,gender) {
+    class Human {
+        constructor(name, weight) {
             this.name = name;
-            this.gender = gender;
             this.weight = weight;
         }
-        isMale () {
-            if (this.gender == "male") {
-                return true
-            } else {
-                return false
-            }
-        }
-        setGender (sex) {
-            return this.gender = sex;
-        }
-        eatApple  (apple) {
-            if (!apple.isEmpty()) {
-                this.weight += 1;
+        eatApple(apple) {
+            if(apple.checkApple()) {
                 apple.decrease();
-                console.log('${this.name} eat apple....')
-
+                this.weight++;
+            } else {
+                alert("Táo đã hết. Xin mời ăn trộm trái khác.")
             }
         }
+        getName() {
+            return this.name;
+        }
+        getWeight() {
+            return this.weight;
+        }
     }
-    function theStory (){
-        let adam = new Human('adam', 60);
-        let eva = new Human('eva', 45);
-        let apple = new Apple()
-        adam.setGender('male');
-        eva.setGender('female');
-        while (apple.weight > 0) {
-        adam.eatApple(apple);
-        eva.eatApple(apple);
+    function main() {
+        let adam = new Human("Adam",70);
+        let eva = new Human("Eva", 50);
+        let apple = new Apple(10);
+        while(apple.checkApple()) {
+            adam.eatApple(apple);
+            eva.eatApple(apple);
+        }
+        alert(adam.getName() +". Cân nặng hiện tại là: "+adam.getWeight())
+        alert(eva.getName() +". Cân nặng hiện tại là: "+eva.getWeight())
     }
-    document.write('Apple are already eaten');
-    }
-    theStory();
-
-
-
-
-
-
-
-
-
-
+    main();
 </script>
 </body>
 </html>
